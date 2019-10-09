@@ -11,3 +11,10 @@ a {
   color: #333;
   text-decoration: none;
 }
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.btn-primary {
+  border-color: transparent;
+}

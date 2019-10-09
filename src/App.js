@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Carousel from './components/Carousel';
+import Card from './components/Card';
 import uuid from 'uuid';
 import guitar from './images/guitar_1.jpg';
 import bass from './images/bass_1.png';
@@ -43,10 +44,19 @@ class App extends Component {
           <Route exact path="/" render={ props => (
                 <React.Fragment>
                   <Carousel />
-                  <div className='row'>
-                    <div className="col-xs-12 col-md-6 col-lg-4">
+                  <div className='row' style={{ marginTop: '100px' }}>
+                    { this.state.cardInfo.map( cardInfo_1=> (
+                      <div className="col-xs-12 col-md-6 col-lg-4">
+                        <Card 
+                          key = { cardInfo_1.id }
+                          title = { cardInfo_1.title }
+                          was = { cardInfo_1.was }
+                          price = { cardInfo_1.price }
+                          image = { cardInfo_1.image }
+                        />
+                      </div>
+                    ))}
 
-                    </div>
                   </div>
                 </React.Fragment>
               ) } />
