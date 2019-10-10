@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     return (
@@ -16,10 +16,16 @@ export default function Navbar() {
                         Guitars
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Acoustic</a>
-                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Electric</a>
-                        <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>All Guitars</a>
+                            <Link>
+                                <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Acoustic</a>
+                            </Link>
+                            <Link>
+                                <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Electric</a>
+                            </Link>
+                            <div className="dropdown-divider"></div>
+                            <Link>
+                                <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>All Guitars</a>
+                            </Link>
                         </div>
                     </li>
                     <li className="nav-item dropdown" style={{ marginRight: '20px' }}>
@@ -27,10 +33,16 @@ export default function Navbar() {
                         Basses
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Acoustic</a>
-                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Electric</a>
-                        <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>All Basses</a>
+                            <Link>
+                                <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Acoustic</a>
+                            </Link>
+                            <Link>
+                                <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Electric</a>
+                            </Link>
+                            <div className="dropdown-divider"></div>
+                            <Link>
+                                <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>All Basses</a>
+                            </Link>
                         </div>
                     </li>
                     <li className="nav-item dropdown" style={{ marginRight: '20px' }}>
@@ -38,10 +50,16 @@ export default function Navbar() {
                         Amps
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Guitar Amps</a>
-                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Bass Amps</a>
-                        <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>All Amps</a>
+                            <Link>
+                                <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Guitar Amps</a>
+                            </Link>
+                            <Link>
+                                <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Bass Amps</a>
+                            </Link>
+                            <div className="dropdown-divider"></div>
+                            <Link>
+                                <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>All Amps</a>
+                            </Link>
                         </div>
                     </li>
                     </ul>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Carousel from './components/Carousel';
 import Card from './components/Card';
@@ -85,8 +85,8 @@ class App extends Component {
     }
     return (
       <Router>
-        <div className="App">
-          <Navbar />
+        <Navbar />
+        <Switch>
           <Route exact path="/" render={ props => (
                 <React.Fragment>
                   <Carousel />
@@ -172,7 +172,10 @@ class App extends Component {
                   </div>
                 </React.Fragment>
               ) } />
-        </div>
+          {/* <Route path="/guitars" exact component={ Guitars } /> */}
+          {/* <Router path="/basses" exact component={ Basses } />
+          <Router path="/amps" exact component={ Amps } /> */}
+        </Switch>
       </Router>
     );
   }
