@@ -67,7 +67,22 @@ class App extends Component {
     ]
   }
 
-  render() {
+  render() {  
+    const footerColumns = {
+      fontSize: '20px',
+      textAlign: 'center',
+      cursor: 'pointer'
+    }
+    const footerHeaders = {
+      textAlign: 'center', 
+      display: 'block', 
+      width: '100%', 
+      paddingTop: '0', 
+      marginTop: '50px', 
+      marginBottom: '30px',
+      fontWeight: '700',
+      color: 'black'
+    }
     return (
       <Router>
         <div className="App">
@@ -101,6 +116,59 @@ class App extends Component {
                         />
                       </div>
                     ))}
+                  </div>
+                  <div className="row justify-content-center" style={{ backgroundColor: 'white', paddingBottom: '50px' }}>
+                    <div className="col-xs-12 col-md-6">
+                      <h2 style={{ textAlign: 'center', display: 'block', width: '100%', paddingTop: '0', marginTop: '50px', marginBottom: '30px' }}>Subscribe to learn more about exclusive offers, tips, and more!</h2>
+                      <form>
+                        <div class="input-group mb-3">
+                          <input type="text" class="form-control" placeholder="Recipient's Email Address" aria-label="Recipient's Email Address" aria-describedby="basic-addon2" />
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" style={{ backgroundColor: 'red', color: 'white' }} type="button">Button</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div className="row justify-content-center" style={{ paddingBottom: '50px' }}>
+                    <div className="col-xs-12 col-md-6 col-lg-4">
+                      <h2 style={ footerHeaders }>
+                        Your Account
+                      </h2>
+                      <div style={ footerColumns }>
+                        <p>Order History</p>
+                        <p>Returns</p>
+                        <p>Wish List</p>
+                        <p>Email Preferences</p>
+                        <p>BusinessAccounts</p>
+                      </div>
+                    </div>
+                    <div className="col-xs-12 col-md-6 col-lg-4">
+                      <h2 style={ footerHeaders }>
+                        Features
+                      </h2>
+                      <div style={ footerColumns }>
+                        <p>Rebates</p>
+                        <p>Layaway</p>
+                        <p>Donations</p>
+                        <p>Pro Coverage</p>
+                        <p>Affiliate Program</p>
+                        <p>Press Room</p>
+                      </div>
+                    </div>
+                    <div className="col-xs-12 col-md-6 col-lg-4">
+                      <h2 style={ footerHeaders }>
+                        Support
+                      </h2>
+                      <div style={ footerColumns }>
+                        <p>Service & Support</p>
+                        <p>About</p>
+                        <p>Careers</p>
+                        <p>Site Map</p>
+                        <p>Locations</p>
+                        <p>Accessibility Statement</p>
+                      </div>
+                    </div>
                   </div>
                 </React.Fragment>
               ) } />

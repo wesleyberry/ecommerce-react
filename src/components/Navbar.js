@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{ backgroundColor: '#e7e7e7' }}>
-                <a className="navbar-brand" style={ navBrand } to="#">GUITAR STORE</a>
+                <a className="navbar-brand" style={ navBrand } to="#">Guitar World</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -16,10 +16,10 @@ export default function Navbar() {
                         Guitars
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a className="dropdown-item" to="#">Acoustic</a>
-                        <a className="dropdown-item" to="#">Electric</a>
+                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Acoustic</a>
+                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Electric</a>
                         <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" to="#">All Guitars</a>
+                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>All Guitars</a>
                         </div>
                     </li>
                     <li className="nav-item dropdown" style={{ marginRight: '20px' }}>
@@ -27,10 +27,10 @@ export default function Navbar() {
                         Basses
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a className="dropdown-item" to="#">Acoustic</a>
-                        <a className="dropdown-item" to="#">Electric</a>
+                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Acoustic</a>
+                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Electric</a>
                         <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" to="#">All Basses</a>
+                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>All Basses</a>
                         </div>
                     </li>
                     <li className="nav-item dropdown" style={{ marginRight: '20px' }}>
@@ -38,10 +38,10 @@ export default function Navbar() {
                         Amps
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a className="dropdown-item" to="#">Guitar Amps</a>
-                        <a className="dropdown-item" to="#">Bass Amps</a>
+                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Guitar Amps</a>
+                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>Bass Amps</a>
                         <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" to="#">All Amps</a>
+                        <a className="dropdown-item" to="#" style={{ cursor: 'pointer', fontSize: '24px' }}>All Amps</a>
                         </div>
                     </li>
                     </ul>
@@ -53,10 +53,10 @@ export default function Navbar() {
 
 const navBrand = {
     fontWeight: '700',
-    fontSize: '30px',
+    fontSize: '40px',
     marginLeft: '40px'
 }
 const dropDownToggle = {
-    fontSize: '24px',
+    fontSize: '30px',
     color: 'black'
 }

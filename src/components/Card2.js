@@ -8,7 +8,7 @@ export class Card2 extends Component {
                 <div className="card" style={ cardDetails }>
                     <img src={ this.props.image } className="card-img-top" alt="Instrument" style={ imageDetails }/>
                     <div className="card-body">
-                        <h5 className="card-title" style={{ fontSize: '40px', letterSpacing: '2px' }}>{ this.props.title }</h5>
+                        <h5 className="card-title" style={{ fontSize: '40px', letterSpacing: '1px' }}>{ this.props.title }</h5>
                         <p className="card-text" style={{ fontSize: '20px' }}>{ this.props.description }</p>
                     </div>
                 </div>
