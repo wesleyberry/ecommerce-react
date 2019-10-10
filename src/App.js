@@ -12,7 +12,23 @@ import guitar_club from './images/guitar_club.jpg';
 import lesson from './images/lesson.jpg';
 import rentals from './images/rentals.jpeg';
 import repair from './images/repair.jpg';
+import GuitarPage from './pages/GuitarPage.js';
+// import BassPage from './pages/BassPage.js';
+// import AmpPage from './pages/AmpPage.js';
+import * as firebase from 'firebase';
 import './App.css';
+
+const config = {
+  apiKey: "AIzaSyAzsr0AM9QaMp-ztgePDi7phm_tT69JtWM",
+  authDomain: "ecommerce-react-49870.firebaseapp.com",
+  databaseURL: "https://ecommerce-react-49870.firebaseio.com",
+  projectId: "ecommerce-react-49870",
+  storageBucket: "ecommerce-react-49870.appspot.com",
+  messagingSenderId: "120218859656",
+  appId: "1:120218859656:web:fcdfec40af4bb80d28073d"
+};
+
+firebase.initializeApp(config);
 
 class App extends Component {
   state = {
@@ -64,7 +80,15 @@ class App extends Component {
         description: 'Learn with other aspiring musicians',
         image: guitar_club
       },
-    ]
+    ],
+    products: []
+  }
+
+  componentDidMount = () => {
+    const database = firebase.database();
+    database.ref().on('value', function(snapshot) {
+      console.log(snapshot.val());
+    })
   }
 
   render() {  
@@ -172,9 +196,13 @@ class App extends Component {
                   </div>
                 </React.Fragment>
               ) } />
-          {/* <Route path="/guitars" exact component={ Guitars } /> */}
-          {/* <Router path="/basses" exact component={ Basses } />
-          <Router path="/amps" exact component={ Amps } /> */}
+          <Route path="/guitars" exact component={ GuitarPage } />
+          {/* <Route path="/guitars/:single" exact component={ } /> */}
+          {/* <Route path="/basses" exact component={ BassPage } /> */}
+          {/* <Route path="/basses/:single" exact component={ } /> */}
+          {/* <Route path="/amps" exact component={ AmpPage } /> */}
+          {/* <Route path="/amps:/single" exact component={ } /> */}
+          {/* <Route component={ ErrorPage } */}
         </Switch>
       </Router>
     );
